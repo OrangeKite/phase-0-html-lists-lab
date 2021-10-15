@@ -3,7 +3,7 @@ require 'pry'
 RSpec.describe 'index.html' do
   it 'contains a <ul> tag with the correct <li> tags' do
     ul = parsed_html.search('ul').first
-    expect(ul).to_not be_nil, "The main <ul> tag is missing!"
+    expect(ul).to_not be_nil, "God is calling"
     expect(html_file_contents).to include('</ul>'), "Don't forget to include a closing </ul>"
 
     children = ul.children.select {|child| child.name == "li"}
